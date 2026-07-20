@@ -21,8 +21,8 @@ const minterIdl = require("../target/idl/token_minter.json");
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ORACLE_PROGRAM_ID = new PublicKey("4cuvLFFqhaKnTHfeq2FtTUvgudRSe7wq982fA9PBUqBU");
-const MINTER_PROGRAM_ID = new PublicKey("E5erGzaxgCwHqH7RjLXLGWziXj8CXpyN7zW6BRodfFnE");
+const ORACLE_PROGRAM_ID = new PublicKey("9wT48aa7wPfs8dBhwvJhWgcurDoRVB9oY1aFA8XPNwcH");
+const MINTER_PROGRAM_ID = new PublicKey("ER1r38C6Lv7bkE89oWbYcYu7dDTUvHs9612GpCDZRbMy");
 
 const ORACLE_SO = path.resolve(__dirname, "../target/deploy/sol_usd_oracle.so");
 const MINTER_SO = path.resolve(__dirname, "../target/deploy/token_minter.so");
@@ -167,9 +167,8 @@ describe("token_minter (LiteSVM)", () => {
     assertSuccess(res);
 
     const treasuryAfter = svm.getBalance(treasury.publicKey) ?? BigInt(0);
-    // TODO(student): this formula is intentionally broken.
-    // The fee should get smaller when SOL/USD price gets larger.
-    const expectedFee = PRICE.mul(new BN(anchor.web3.LAMPORTS_PER_SOL)).div(FEE_USD);
+
+    const expectedFee = FEE_USD.mul(new BN(anchor.web3.LAMPORTS_PER_SOL)).div(PRICE);
     expect(treasuryAfter - treasuryBefore).to.eq(BigInt(expectedFee.toString()));
 
     const mintAcct = svm.getAccount(mintKeypair.publicKey);

@@ -13,7 +13,7 @@ const oracleIdl = require("../target/idl/sol_usd_oracle.json");
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ORACLE_PROGRAM_ID = new PublicKey("4cuvLFFqhaKnTHfeq2FtTUvgudRSe7wq982fA9PBUqBU");
+const ORACLE_PROGRAM_ID = new PublicKey("9wT48aa7wPfs8dBhwvJhWgcurDoRVB9oY1aFA8XPNwcH");
 const ORACLE_SO = path.resolve(__dirname, "../target/deploy/sol_usd_oracle.so");
 const ORACLE_SEED = Buffer.from("oracle_state");
 
@@ -86,7 +86,7 @@ describe("sol_usd_oracle (LiteSVM)", () => {
     expect(decoded.price.toNumber()).to.eq(0);
     // TODO(student): this expectation is intentionally wrong.
     // Re-check how many decimals the oracle stores for the SOL/USD price.
-    expect(decoded.decimals).to.eq(8);
+    expect(decoded.decimals).to.eq(6);
   });
 
   it("update_price updates price only for admin", () => {
