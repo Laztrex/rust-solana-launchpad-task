@@ -1,6 +1,6 @@
 // Program IDs одинаковы для localnet и devnet (ключи из target/deploy)
-export const ORACLE_PROGRAM_ID = "4cuvLFFqhaKnTHfeq2FtTUvgudRSe7wq982fA9PBUqBU";
-export const MINTER_PROGRAM_ID = "E5erGzaxgCwHqH7RjLXLGWziXj8CXpyN7zW6BRodfFnE";
+export const ORACLE_PROGRAM_ID = "9wT48aa7wPfs8dBhwvJhWgcurDoRVB9oY1aFA8XPNwcH";
+export const MINTER_PROGRAM_ID = "ER1r38C6Lv7bkE89oWbYcYu7dDTUvHs9612GpCDZRbMy";
 
 // Сети и RPC (переключатель на фронте)
 export type NetworkId = "localnet" | "devnet";
