@@ -7,12 +7,12 @@ resolution = true
 skip-lint = false
 
 [programs.devnet]
-sol_usd_oracle = "4cuvLFFqhaKnTHfeq2FtTUvgudRSe7wq982fA9PBUqBU"
-token_minter = "E5erGzaxgCwHqH7RjLXLGWziXj8CXpyN7zW6BRodfFnE"
+sol_usd_oracle = "C4dYoNH7B2gGTAkCTdbFbviQRSjEYp6ZHAD7dhNZixR5"
+token_minter = "83VyNBbwTJnVWKJQWhf8GzrsyzNgZ4RDwjrTQREv34UH"
 
 [programs.localnet]
-sol_usd_oracle = "9wT48aa7wPfs8dBhwvJhWgcurDoRVB9oY1aFA8XPNwcH"
-token_minter = "ER1r38C6Lv7bkE89oWbYcYu7dDTUvHs9612GpCDZRbMy"
+sol_usd_oracle = "C4dYoNH7B2gGTAkCTdbFbviQRSjEYp6ZHAD7dhNZixR5"
+token_minter = "83VyNBbwTJnVWKJQWhf8GzrsyzNgZ4RDwjrTQREv34UH"
 
 [provider]
 cluster = "localnet"
@@ -23,3 +23,6 @@ litesvm = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
 
 [hooks]
+
+[build]
+sbpf_version = "0.5.0"
