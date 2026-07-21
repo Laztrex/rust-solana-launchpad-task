@@ -2,6 +2,10 @@
 
 Учебный мини-лаунчпад на Solana + Anchor: два on-chain контракта (SOL/USD oracle и token minter), Rust backend для обновления цены и прослушки событий, а также Remix фронтенд (папка `frontend/`).
 
+
+**Подробный лог разработки и возникшие проблемы**: [DEVELOPMENT_LOG.md](./DEVELOPMENT_LOG.md)
+
+
 ## Структура
 - `program/` — Anchor workspace  
   - `programs/sol_usd_oracle` — хранит цену SOL/USD (decimals = 6)  
