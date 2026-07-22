@@ -3,6 +3,15 @@
 Учебный мини-лаунчпад на Solana + Anchor: два on-chain контракта (SOL/USD oracle и token minter), Rust backend для обновления цены и прослушки событий, а также Remix фронтенд (папка `frontend/`).
 
 
+## Devnet deployment
+
+- **Oracle program ID**: `C4dYoNH7B2gGTAkCTdbFbviQRSjEYp6ZHAD7dhNZixR5`
+- **Minter program ID**: `83VyNBbwTJnVWKJQWhf8GzrsyzNgZ4RDwjrTQREv34UH`
+- **Oracle state PDA**: `BGc27LiNW6qZCrLCrkxBDAnJFdtSf2AhQr2DzhiWZzdM`
+
+### Successful mint transactions
+- [Transaction 1](https://explorer.solana.com/address/DZ9VNfWUfarCDQMdddCHVjbG8NMLaqpdGa3VZEhpGbmq?cluster=devnet)
+
 **Подробный лог разработки и возникшие проблемы**: [DEVELOPMENT_LOG.md](./DEVELOPMENT_LOG.md)
 
 
@@ -101,3 +110,4 @@
 3. `cd program && node scripts/init-local.js` — скопировать `ORACLE_STATE_PUBKEY` в `backend/.env`
 4. `cd backend && cargo run`
 5. `cd frontend && npm run dev` — открыть в браузере и покликать.
+
